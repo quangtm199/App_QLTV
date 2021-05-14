@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02f31b5b-e29d-458f-bb39-67f7d1ae3402">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from dbo.table1]]>
+	</queryString>
+	<field name="nxb" class="java.lang.String"/>
+	<field name="SACH GIAO KHOA" class="java.lang.Integer"/>
+	<field name="SACH VAN HOC" class="java.lang.Integer"/>
+	<field name="SACH CHUYEN NGANH" class="java.lang.Integer"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="214">
+			<staticText>
+				<reportElement x="14" y="10" width="257" height="36" uuid="bf88b472-fcd3-45c3-8ec2-de2f911f7a77"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trường Đại Học Bách Khoa Hà Nội]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="39" width="136" height="20" uuid="32406058-6493-4964-83f5-8b38adb92900"/>
+				<text><![CDATA[Thư Viện Tạ Quang Bửu]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="109" width="151" height="105" uuid="fb1b2a4e-d6ee-4ee4-ba04-09069a1aac1c"/>
+				<imageExpression><![CDATA["C:\\Users\\Microsoft Windows\\Desktop\\images.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="332" y="10" width="205" height="20" uuid="5b21aa7b-6e7d-41be-bd12-6f62cf4e6863"/>
+				<text><![CDATA[CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM                     ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="30" width="144" height="20" uuid="12e84bcd-ad9b-4b44-aa58-e83dbe63d390"/>
+				<text><![CDATA[ĐỘC LẬP-TỰ DO-HẠNH PHÚC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="59" width="145" height="20" uuid="56f7e665-e6d3-42d1-8a09-2d648ffe6b3d"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Sinh Viên:Trần Minh Quang]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="f5ba5914-b893-4b4e-a719-68aa5e3cf553"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="264f3432-3d49-48e2-a2b7-35cf777b3fef"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nhà Xuất Bản]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="138" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="58ba2aef-8f19-41e5-a087-88129c0b22c4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sách Giáo Khoa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="138" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="381b1aa1-c130-4909-8845-f2a7c2f62b18"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sách Văn Học]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="414" y="0" width="161" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="976f25f0-4c6d-4572-b310-ec9970ba79e2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sách Chuyên Ngành]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="6ef374dc-0a01-4aae-8c35-204e28fad258"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="138" height="20" uuid="003b5ff7-3abb-4d70-9cee-4418248432c5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nxb}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="138" y="0" width="138" height="20" uuid="7c90ff67-d2ea-4d1c-a0a8-61135c0b1b2b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SACH GIAO KHOA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="0" width="138" height="20" uuid="ad38bf29-d5ef-4822-a3e3-df9d15580084"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SACH VAN HOC}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="414" y="0" width="138" height="20" uuid="5c70ab68-4307-49ed-8d32-b369bb6f1c0f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SACH CHUYEN NGANH}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="5178c787-ae84-4726-ace4-5d0d81cfdf56"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="05212e16-b706-4945-92dd-410f6610a8d1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="db73b1eb-ad26-4fdd-8fce-5a33a344e0a7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

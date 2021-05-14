@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dea71e3b-52fc-4260-9f0e-acaf54a2cace">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="PHIEUMUON20173329_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     BanDoc20173329."MaBanDoc20173329" AS BanDoc20173329_MaBanDoc20173329,
+     BanDoc20173329."MATAIKHOAN20173329" AS BanDoc20173329_MATAIKHOAN20173329,
+     BanDoc20173329."TENBANDOC20173329" AS BanDoc20173329_TENBANDOC20173329,
+     BANGSACH20173329."MASACH20173329" AS BANGSACH20173329_MASACH20173329,
+     BANGSACH20173329."TENSACH20173329" AS BANGSACH20173329_TENSACH20173329,
+     CHITIETMUON20173329."MAPHIEUMUON20173329" AS CHITIETMUON20173329_MAPHIEUMUON20173329,
+     CHITIETMUON20173329."MASACH20173329" AS CHITIETMUON20173329_MASACH20173329,
+     CHITIETMUON20173329."NGAYMUON20173329" AS CHITIETMUON20173329_NGAYMUON20173329,
+     CHITIETMUON20173329."NGAYTRA20173329" AS CHITIETMUON20173329_NGAYTRA20173329,
+     CHITIETMUON20173329."TIENCOC20173329" AS CHITIETMUON20173329_TIENCOC20173329,
+     CHITIETMUON20173329."TIENPHAT20173329" AS CHITIETMUON20173329_TIENPHAT20173329,
+     NHANVIEN20173329."TENNHANVIEN20173329" AS NHANVIEN20173329_TENNHANVIEN20173329,
+     PHIEUMUON20173329."id" AS PHIEUMUON20173329_id,
+     PHIEUMUON20173329."ngaymuon20173329" AS PHIEUMUON20173329_ngaymuon20173329,
+     BanDoc20173329."SODIENTHOAI20173329" AS BanDoc20173329_SODIENTHOAI20173329,
+     PHIEUMUON20173329."MAPHIEUMUON20173329" AS PHIEUMUON20173329_MAPHIEUMUON20173329,
+     BANGSACH20173329."GIATIEN20173329" AS BANGSACH20173329_GIATIEN20173329
+FROM
+     "dbo"."BANGSACH20173329" BANGSACH20173329 INNER JOIN "dbo"."CHITIETMUON20173329" CHITIETMUON20173329 ON BANGSACH20173329."MASACH20173329" = CHITIETMUON20173329."MASACH20173329"
+     INNER JOIN "dbo"."PHIEUMUON20173329" PHIEUMUON20173329 ON CHITIETMUON20173329."MAPHIEUMUON20173329" = PHIEUMUON20173329."MAPHIEUMUON20173329"
+     INNER JOIN "dbo"."BanDoc20173329" BanDoc20173329 ON PHIEUMUON20173329."MABANDOC20173329" = BanDoc20173329."MaBanDoc20173329"
+     INNER JOIN "dbo"."NHANVIEN20173329" NHANVIEN20173329 ON PHIEUMUON20173329."MANHANVIEN20173329" = NHANVIEN20173329."MANHANVIEN20173329"
+WHERE
+     PHIEUMUON20173329."id" = $P{PHIEUMUON20173329_id}]]>
+	</queryString>
+	<field name="BanDoc20173329_MaBanDoc20173329" class="java.lang.String"/>
+	<field name="BanDoc20173329_MATAIKHOAN20173329" class="java.lang.String"/>
+	<field name="BanDoc20173329_TENBANDOC20173329" class="java.lang.String"/>
+	<field name="BANGSACH20173329_MASACH20173329" class="java.lang.String"/>
+	<field name="BANGSACH20173329_TENSACH20173329" class="java.lang.String"/>
+	<field name="CHITIETMUON20173329_MAPHIEUMUON20173329" class="java.lang.String"/>
+	<field name="CHITIETMUON20173329_MASACH20173329" class="java.lang.String"/>
+	<field name="CHITIETMUON20173329_NGAYMUON20173329" class="java.sql.Timestamp"/>
+	<field name="CHITIETMUON20173329_NGAYTRA20173329" class="java.sql.Timestamp"/>
+	<field name="CHITIETMUON20173329_TIENCOC20173329" class="java.lang.Integer"/>
+	<field name="CHITIETMUON20173329_TIENPHAT20173329" class="java.lang.Integer"/>
+	<field name="NHANVIEN20173329_TENNHANVIEN20173329" class="java.lang.String"/>
+	<field name="PHIEUMUON20173329_id" class="java.lang.Integer"/>
+	<field name="PHIEUMUON20173329_ngaymuon20173329" class="java.sql.Timestamp"/>
+	<field name="BanDoc20173329_SODIENTHOAI20173329" class="java.lang.String"/>
+	<field name="PHIEUMUON20173329_MAPHIEUMUON20173329" class="java.lang.String"/>
+	<field name="BANGSACH20173329_GIATIEN20173329" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="236" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="0" width="257" height="36" uuid="3c09f57e-d5d4-4932-9b5c-57a97f841241"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trường Đại Học Bách Khoa Hà Nội]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="29" width="136" height="20" uuid="3268f1d5-612e-44bc-a20d-92de161a355c"/>
+				<text><![CDATA[Thư Viện Tạ Quang Bửu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="205" height="20" uuid="5d8c7c2d-ceb9-4891-98d0-0146d6fa5e58"/>
+				<text><![CDATA[CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM                     ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="20" width="144" height="20" uuid="13176999-25ab-470a-9ae3-c331ce9192ab"/>
+				<text><![CDATA[ĐỘC LẬP-TỰ DO-HẠNH PHÚC]]></text>
+			</staticText>
+			<image>
+				<reportElement x="28" y="88" width="151" height="105" uuid="d31cd43e-8a0e-42ef-8d19-da547c1d2dca"/>
+				<imageExpression><![CDATA["C:\\Users\\Microsoft Windows\\Desktop\\images.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="55" y="49" width="145" height="20" uuid="69b79112-9971-406c-a024-0f22db2347c5"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Sinh Viên:Trần Minh Quang]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="20" uuid="b125f63b-8d0d-40b8-bcf2-aefbdba6e7e7"/>
+				<text><![CDATA[SO HD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="100" height="20" uuid="5da5340f-e5ce-4f6b-a661-4c377b00e5f4"/>
+				<text><![CDATA[NGAY TAO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="89" y="10" width="188" height="20" uuid="021581d5-ed4b-4a65-b1d9-b45c1c596293"/>
+				<textFieldExpression><![CDATA[$F{PHIEUMUON20173329_MAPHIEUMUON20173329}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="89" y="45" width="172" height="20" uuid="855aa747-9c5a-4c20-ab38-dc928ea155d5"/>
+				<textFieldExpression><![CDATA[$F{PHIEUMUON20173329_ngaymuon20173329}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="75" width="100" height="20" uuid="536130cd-e753-4ddf-bc61-f97c37c716bb"/>
+				<text><![CDATA[NHAN VIEN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="75" width="100" height="20" uuid="4f2f26d9-88f6-4264-962c-6b70c4e63cbf"/>
+				<textFieldExpression><![CDATA[$F{NHANVIEN20173329_TENNHANVIEN20173329}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="322" y="10" width="100" height="20" uuid="3c20c323-9344-45a8-ad42-345e1680ff5c"/>
+				<text><![CDATA[KHACH HANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="45" width="100" height="20" uuid="0d0d3e12-a3cf-41f4-a399-459d3910901d"/>
+				<text><![CDATA[SDT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="10" width="100" height="20" uuid="68e0cdbb-c4a2-479c-89cc-b636a1ea189b"/>
+				<textFieldExpression><![CDATA[$F{BanDoc20173329_TENBANDOC20173329}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="45" width="100" height="20" uuid="45f445a2-2e9f-4d30-81af-f5265361b4f5"/>
+				<textFieldExpression><![CDATA[$F{BanDoc20173329_SODIENTHOAI20173329}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="01b418b0-2a08-410e-a7c0-8d23481f3fec"/>
+				<text><![CDATA[MA SACH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="2a029b05-bbbb-486c-8e44-59a06b78323c"/>
+				<text><![CDATA[TEN SACH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="347a49b3-628a-4e1d-83ca-c2d514b3d25e"/>
+				<text><![CDATA[TIENPHAT]]></text>
+			</staticText>
+			<line>
+				<reportElement x="4" y="19" width="540" height="1" uuid="d94a6e40-342c-451e-b30b-97d255d81e97"/>
+			</line>
+			<staticText>
+				<reportElement x="300" y="1" width="100" height="20" uuid="e1e1f867-e539-4785-8de4-5a9b13ba69aa"/>
+				<text><![CDATA[TIEN COC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="1" width="100" height="20" uuid="c6d358a5-1a53-4ae8-a21b-fea4b30132db"/>
+				<text><![CDATA[GIA TIEN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="f413b43d-7c14-4c3e-9e9a-2841b0f91bcc"/>
+				<textFieldExpression><![CDATA[$F{CHITIETMUON20173329_MASACH20173329}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="fd657c75-7a23-4065-b59b-db9c6103e168"/>
+				<textFieldExpression><![CDATA[$F{BANGSACH20173329_TENSACH20173329}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="5c81dd13-3ada-4c24-9312-06ad71ddea16"/>
+				<textFieldExpression><![CDATA[$F{BANGSACH20173329_GIATIEN20173329}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="0b9d1f47-4c81-4f6a-9c0a-c799456b3ea2"/>
+				<textFieldExpression><![CDATA[$F{CHITIETMUON20173329_TIENCOC20173329}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="ce602a76-8995-41cc-adc4-579e8d27b26f"/>
+				<textFieldExpression><![CDATA[$F{CHITIETMUON20173329_TIENPHAT20173329}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="4" y="20" width="544" height="1" uuid="cc73f5ce-aac1-4430-b888-983eeacb71f0"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="55" y="18" width="100" height="20" uuid="eeba938a-18fe-4e0f-8b85-e66fc5d37773"/>
+				<text><![CDATA[Người Lập]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="18" width="100" height="20" uuid="1c604249-4b8a-4e59-9589-9fdb35964a1f"/>
+				<text><![CDATA[Xác Nhận Của Thủ Thư]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
